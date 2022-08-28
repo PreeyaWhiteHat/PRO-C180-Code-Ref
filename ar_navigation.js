@@ -25,6 +25,7 @@ function render_elements() {
         url: `https://api.mapbox.com/directions/v5/mapbox/driving/${coordinates.source_lon}%2C${coordinates.source_lat}%3B${coordinates.destination_lon}%2C${coordinates.destination_lat}?alternatives=true&geometries=polyline&steps=true&access_token=pk.eyJ1IjoiYXBvb3J2ZWxvdXMiLCJhIjoiY2ttZnlyMDgzMzlwNTJ4a240cmEzcG0xNyJ9.-nSyL0Gy2nifDibXJg4fTA`,
         type: "get",
         success: function (response) {
+            console.log(response)
             let images = {
                 "turn_right": "ar_right.png",
                 "turn_left": "ar_left.png",
